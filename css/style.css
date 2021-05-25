@@ -111,6 +111,7 @@
   justify-content: space-between;
   align-items: center;
   padding-bottom: 21px;
+  padding-top: 20px;
 }
 .call__button {
   margin: 12px 0;
@@ -125,46 +126,10 @@
   margin: 35px 0;
 }
 
-.objetivos {
-  width: 80%;
-  margin: auto;
-}
-.objetivos__title {
-  width: 10%;
-  padding-top: 43px;
-  margin-bottom: 14px;
-}
-.objetivos__text {
-  position: relative;
-  margin-bottom: 50px;
-}
-
-.card {
-  padding: 26px 20px;
-  margin: 32px 10px;
-  border: 1px solid #686868;
-  border-radius: 5px;
-}
-.card__img {
-  margin: 10px;
-}
-.card__img-wrapper {
-  display: flex;
-  justify-content: center;
-}
-.card__paragraph {
-  font-size: 16px;
-}
-.card__subtitle {
-  font-size: 14px;
-}
-
 .mid_banner {
-  background-color: #191919;
-  height: 40vh;
+  background-color: #0c0c0c;
+  height: 70vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
   text-align: center;
   position: relative;
 }
@@ -178,6 +143,166 @@
 }
 .mid_banner__title {
   width: 80%;
+}
+.mid_banner__title__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40vh;
+}
+
+.price {
+  background-color: #F89D24;
+  height: 30vh;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.price__title {
+  margin-bottom: 30px;
+}
+
+.cards__container {
+  width: 80%;
+  margin: auto;
+}
+.cards__title {
+  width: 10%;
+  padding-top: 43px;
+  margin-bottom: 14px;
+}
+.cards__text {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.card {
+  padding: 26px 20px;
+  margin: 32px 10px;
+  border: 1px solid #686868;
+  border-radius: 5px;
+}
+.card__img {
+  max-width: 100%;
+}
+.card__img-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.card__paragraph {
+  font-size: 16px;
+  margin-top: 10px;
+}
+.card__subtitle {
+  font-size: 14px;
+  margin-top: 10px;
+}
+.card--desk {
+  display: none;
+}
+
+.skills {
+  background-image: url(../assets/images/teacher-bnw.png);
+  background-size: cover;
+}
+.skills__container {
+  position: relative;
+  width: 80%;
+  margin: auto;
+}
+.skills__title {
+  padding: 40px 0;
+  font-size: 48px;
+  position: relative;
+  z-index: 1;
+}
+.skills__arrow {
+  width: 10px;
+  height: 10px;
+  margin-right: 20px;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  transform: rotate(225deg);
+  transition: all 1s;
+}
+
+.skill__content {
+  background-color: #191919;
+  border: 1px solid #F89D24;
+  border-left: none;
+  border-right: none;
+  padding: 24px 16px;
+  font-size: 18px;
+  line-height: 31px;
+  color: #fff;
+  display: none;
+  transform: translateY(-100px);
+  transition: transform 1s;
+}
+.skill__title {
+  background-color: #686868;
+  height: 46px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.skill__title--p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 200;
+  padding: 10px;
+}
+.skill.open .skill__content {
+  transform: translateY(0);
+  display: block;
+}
+.skill.open .skill__title--p {
+  font-weight: 600;
+}
+.skill.open .skills__arrow {
+  transform: rotate(45.25deg);
+}
+
+.slide {
+  background-image: url(../assets/images/opinion.png);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  height: 90%;
+  opacity: 0;
+  transition: 1s ease;
+}
+.slide.active {
+  opacity: 1;
+  transition: 1s ease;
+}
+.slide__text {
+  width: 85%;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.navigation-visibility {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav_plus {
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.5);
+  width: 20px;
+  height: 10px;
+  margin: 0 6px;
 }
 
 /*# sourceMappingURL=style.css.map */

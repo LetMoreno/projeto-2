@@ -1,0 +1,36 @@
+.slide{
+    background-image: url(../assets/images/opinion.png);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    height: 90%;
+    opacity: 0;
+    transition: 1s ease;
+    &.active{
+        opacity: 1;
+        transition: 1s ease;
+    }
+    &__text{
+        width: 85%;
+        height: 100%;
+        margin: auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}
+
+.navigation-visibility{
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav_plus{
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.5);
+    width: 20px;
+    height: 10px;
+    margin: 0 6px;
+}

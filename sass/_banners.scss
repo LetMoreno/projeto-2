@@ -1,0 +1,49 @@
+.banner{
+    &__text{
+        text-align: center;
+        width: 88%;
+        margin: auto;
+    }
+    &__paragraph{
+        margin: 35px 0;
+    }
+}
+.mid_banner{
+    background-color: darken($primary-dark, 5%);
+    height: 70vh;
+    display: flex;
+    text-align: center;
+    position: relative;
+    &::before{
+        content: '';
+        background-image: url(/assets/images/Grupo-34.svg);
+        opacity: 0.3;
+        width: 100%;
+        height: 40vh;
+        position: absolute;
+    }
+    &__title{
+        &__container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40vh;
+        }
+        width: 80%;
+    }
+}
+.price{
+    background-color: $secondary-dark;
+    height: 30vh;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__title{
+        margin-bottom: 30px;
+    }
+}

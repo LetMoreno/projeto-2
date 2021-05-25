@@ -1,0 +1,51 @@
+@import 'config';
+
+.header{
+    &__img{
+        width: 44px;
+        margin: 16px 0 0 16px;
+    }
+}
+.container{background-image: radial-gradient( at 100% 0px, lighten($primary-dark, 5%), $primary-dark);}
+
+.title{
+    color: #fff;
+    font-weight: 400;
+    &--h1{font-size: $mobile-font*54px;}
+    &--h2{font-size: $mobile-font*48px;}
+    &--h3{font-size: $mobile-font*32px;}
+    &--h4{font-size: $mobile-font*24px;}
+}
+.subtitle{
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $secondary-dark;
+    &-1{font-size: $mobile-font*32px;}
+    &-2{font-size: $mobile-font*24px;}
+    &-3{font-size: $mobile-font*14px;}
+}
+
+.paragraph{
+    color: $paragraph-clr;
+    line-height: 26px;
+    font-weight: 300;
+    font-size: $mobile-font*18px;
+    &-2{
+        font-size: $mobile-font*16px;
+        font-weight: 600;
+    }
+}
+.square{
+    width: 110px;
+    height: 100px;
+    border: 1px solid $secondary-light;
+    border-top: none;
+    position: absolute;
+    top: 0;
+    left: -15px;
+}
+
+@import 'buttons';
+@import 'banner';
+@import 'cards';
+@import 'banner-2';

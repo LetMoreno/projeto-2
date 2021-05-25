@@ -1,0 +1,40 @@
+.button{
+    @extend %btn;
+
+    &--primary{
+        background-color: $secondary-dark;
+        border: none;
+        &:hover{
+            background-color: darken($secondary-dark, 10%);
+        }
+    }
+
+    &--secondary{
+        background-color: rgba(0, 0, 0, 0);
+        border-color: #fff;
+        &:hover{
+            background-color: #fff;
+            color: $primary-dark;
+        }
+    }
+    &--tertiary{
+        color: $secondary-dark;
+        border: none;
+        &:hover{
+            color: #fff;
+            background-color: $secondary-dark;
+        }
+    }
+}
+.call{
+    &__buttons{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: (33px - 12px);
+    }
+    &__button{
+        margin: 12px 0;
+    }
+}

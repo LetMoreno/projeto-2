@@ -1,0 +1,29 @@
+$secondary-dark:#F89D24;
+$secondary-light: #FEC024;
+$primary-dark: #191919;
+$primary-light: #686868;
+$paragraph-clr: #B5B5B5;
+$font-face: 'Yantramanav', sans-serif;
+$mobile-font: 12/16;
+$tablet-font: 14/16;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-face;
+}
+%btn{
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid;
+    height: 56px;
+    width: 169px;
+    cursor: pointer;
+    transition: .3s ease;
+    text-transform: uppercase;
+}

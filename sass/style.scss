@@ -6,33 +6,23 @@
         margin: 16px 0 0 16px;
     }
 }
-.container{background-image: radial-gradient( at 100% 0px, lighten($primary-dark, 5%), $primary-dark);}
-
-.title{
-    color: #fff;
-    font-weight: 400;
-    &--h1{font-size: $mobile-font*54px;}
-    &--h2{font-size: $mobile-font*48px;}
-    &--h3{font-size: $mobile-font*32px;}
-    &--h4{font-size: $mobile-font*24px;}
+.background{
+    background-image: radial-gradient( at 100% 0px, lighten($primary-dark, 5%), $primary-dark);
+    
 }
-.subtitle{
-    text-transform: uppercase;
-    font-weight: 600;
-    color: $secondary-dark;
-    &-1{font-size: $mobile-font*32px;}
-    &-2{font-size: $mobile-font*24px;}
-    &-3{font-size: $mobile-font*14px;}
-}
+.container{
+    width: 85%; 
+    margin: auto;
+    &__title{
+        width: 80%;
+        padding-top: 43px;
+        margin-bottom: 14px;position: relative;
+        z-index: 1;
+    }
 
-.paragraph{
-    color: $paragraph-clr;
-    line-height: 26px;
-    font-weight: 300;
-    font-size: $mobile-font*18px;
-    &-2{
-        font-size: $mobile-font*16px;
-        font-weight: 600;
+    &__text{
+        position: relative;
+        margin-bottom: 50px;
     }
 }
 .square{
@@ -42,11 +32,60 @@
     border-top: none;
     position: absolute;
     top: 0;
-    left: -15px;
+    left: -10px;
 }
+
+.title{
+    &--h1{
+        @extend %title;
+        font-size: $mobile-font*54px;
+    }
+    &--h2{
+        @extend %title;
+        font-size: $mobile-font*48px;
+    }
+    &--h3{
+        @extend %title;
+        font-size: $mobile-font*32px;
+    }
+    &--h4{
+        @extend %title;
+        font-size: $mobile-font*24px;
+    }
+}
+.subtitle{
+    &-1{
+        @extend %subtitle;
+        font-size: $mobile-font*32px;
+    }
+    &-2{
+        @extend %subtitle;
+        font-size: $mobile-font*24px;
+    }
+    &-3{
+        @extend %subtitle;
+        font-size: $mobile-font*14px;
+    }
+}
+
+.paragraph{
+    &-1{
+        @extend %paragraph;
+        font-weight: 300;
+        font-size: $mobile-font*18px;
+    }
+    &-2{
+        @extend %paragraph;
+        font-size: $mobile-font*16px;
+        font-weight: 600;
+    }
+}
+
 
 @import 'buttons';
 @import 'banners';
 @import 'cards';
-@import 'dropdown';
+@import 'skills';
 @import 'slides';
+@import 'methods';
+@import 'footer';

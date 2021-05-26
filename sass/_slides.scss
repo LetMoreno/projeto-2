@@ -1,14 +1,28 @@
+.slides{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 550px;
+    background-color: $primary-dark;
+    &__container{
+        position: relative;
+        overflow: hidden;
+        height: 550px;
+        width: 100%;
+    }
+}
 .slide{
     background-image: url(../assets/images/opinion.png);
     background-position: center;
     background-size: cover;
     position: absolute;
-    height: 90%;
+    height: 100%;
+    width: 100%;
     opacity: 0;
-    transition: 1s ease;
+    transition: opacity 1s ease;
     &.active{
         opacity: 1;
-        transition: 1s ease;
+        transition: opacity 1s ease;
     }
     &__text{
         width: 85%;
@@ -21,6 +35,14 @@
     }
 }
 
+.navigation{
+    height: 510px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+}
+
 .navigation-visibility{
     z-index: 1;
     display: flex;
@@ -29,8 +51,33 @@
 
 .nav_plus{
     z-index: 1;
-    background: rgba(255, 255, 255, 0.5);
-    width: 20px;
-    height: 10px;
-    margin: 0 6px;
+    opacity: 0.3;
+    width: 9px;
+    height: 9px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+    &::before{
+        content: "+";
+        height:9px;
+        width:9px;
+        font-size:20px;
+        z-index: 1;
+        display:flex;
+        align-items:center;
+        font-weight:bold;
+        color:#fff;
+    }
+
+    &.active{
+        opacity: 1;
+        width: 52px;
+        height: 3px;
+        margin-top: 3px;
+        background-color: #fff;
+        transition: all 0.5s ease;
+        &::before{
+            content: none;
+        }
+    }
 }

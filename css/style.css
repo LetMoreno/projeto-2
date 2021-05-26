@@ -5,7 +5,7 @@
   font-family: "Yantramanav", sans-serif;
 }
 
-.button {
+.button--tertiary, .button--secondary, .button--primary {
   font-size: 16px;
   font-weight: 600;
   color: #fff;
@@ -19,19 +19,57 @@
   text-transform: uppercase;
 }
 
+.title--h4, .title--h3, .title--h2, .title--h1 {
+  color: #fff;
+  font-weight: 400;
+}
+
+.subtitle-3, .subtitle-2, .subtitle-1 {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #F89D24;
+}
+
+.paragraph-2, .paragraph-1 {
+  color: #B5B5B5;
+  line-height: 26px;
+}
+
 .header__img {
   width: 44px;
   margin: 16px 0 0 16px;
 }
 
-.container {
+.background {
   background-image: radial-gradient(at 100% 0px, #262626, #191919);
 }
 
-.title {
-  color: #fff;
-  font-weight: 400;
+.container {
+  width: 85%;
+  margin: auto;
 }
+.container__title {
+  width: 80%;
+  padding-top: 43px;
+  margin-bottom: 14px;
+  position: relative;
+  z-index: 1;
+}
+.container__text {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.square {
+  width: 110px;
+  height: 100px;
+  border: 1px solid #FEC024;
+  border-top: none;
+  position: absolute;
+  top: 0;
+  left: -10px;
+}
+
 .title--h1 {
   font-size: 40.5px;
 }
@@ -45,11 +83,6 @@
   font-size: 18px;
 }
 
-.subtitle {
-  text-transform: uppercase;
-  font-weight: 600;
-  color: #F89D24;
-}
 .subtitle-1 {
   font-size: 24px;
 }
@@ -60,25 +93,13 @@
   font-size: 10.5px;
 }
 
-.paragraph {
-  color: #B5B5B5;
-  line-height: 26px;
+.paragraph-1 {
   font-weight: 300;
   font-size: 13.5px;
 }
 .paragraph-2 {
   font-size: 12px;
   font-weight: 600;
-}
-
-.square {
-  width: 110px;
-  height: 100px;
-  border: 1px solid #FEC024;
-  border-top: none;
-  position: absolute;
-  top: 0;
-  left: -15px;
 }
 
 .button--primary {
@@ -131,6 +152,7 @@
   height: 70vh;
   display: flex;
   text-align: center;
+  justify-content: center;
   position: relative;
 }
 .mid_banner::before {
@@ -166,20 +188,6 @@
   margin-bottom: 30px;
 }
 
-.cards__container {
-  width: 80%;
-  margin: auto;
-}
-.cards__title {
-  width: 10%;
-  padding-top: 43px;
-  margin-bottom: 14px;
-}
-.cards__text {
-  position: relative;
-  margin-bottom: 50px;
-}
-
 .card {
   padding: 26px 20px;
   margin: 32px 10px;
@@ -208,17 +216,6 @@
 .skills {
   background-image: url(../assets/images/teacher-bnw.png);
   background-size: cover;
-}
-.skills__container {
-  position: relative;
-  width: 80%;
-  margin: auto;
-}
-.skills__title {
-  padding: 40px 0;
-  font-size: 48px;
-  position: relative;
-  z-index: 1;
 }
 .skills__arrow {
   width: 10px;
@@ -268,18 +265,33 @@
   transform: rotate(45.25deg);
 }
 
+.slides {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 550px;
+  background-color: #191919;
+}
+.slides__container {
+  position: relative;
+  overflow: hidden;
+  height: 550px;
+  width: 100%;
+}
+
 .slide {
   background-image: url(../assets/images/opinion.png);
   background-position: center;
   background-size: cover;
   position: absolute;
-  height: 90%;
+  height: 100%;
+  width: 100%;
   opacity: 0;
-  transition: 1s ease;
+  transition: opacity 1s ease;
 }
 .slide.active {
   opacity: 1;
-  transition: 1s ease;
+  transition: opacity 1s ease;
 }
 .slide__text {
   width: 85%;
@@ -291,6 +303,14 @@
   justify-content: space-evenly;
 }
 
+.navigation {
+  height: 510px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0;
+}
+
 .navigation-visibility {
   z-index: 1;
   display: flex;
@@ -299,10 +319,71 @@
 
 .nav_plus {
   z-index: 1;
-  background: rgba(255, 255, 255, 0.5);
-  width: 20px;
-  height: 10px;
-  margin: 0 6px;
+  opacity: 0.3;
+  width: 9px;
+  height: 9px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.nav_plus::before {
+  content: "+";
+  height: 9px;
+  width: 9px;
+  font-size: 20px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: #fff;
+}
+.nav_plus.active {
+  opacity: 1;
+  width: 52px;
+  height: 3px;
+  margin-top: 3px;
+  background-color: #fff;
+  transition: all 0.5s ease;
+}
+.nav_plus.active::before {
+  content: none;
+}
+
+.methods__container {
+  width: 85%;
+  margin: auto;
+}
+
+.method {
+  margin: 20px -3px;
+}
+.method__title {
+  list-style-type: circle;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+.method__title::marker {
+  font-size: 25px;
+}
+.method__text {
+  font-size: 16px;
+}
+
+.aptitude {
+  background-image: url(../assets/images/negociando.png);
+  background-size: cover;
+}
+
+.footer {
+  height: 30vh;
+  background-color: #0c0c0c;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.footer__text {
+  font-size: 16px;
 }
 
 /*# sourceMappingURL=style.css.map */

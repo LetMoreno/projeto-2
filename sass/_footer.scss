@@ -1,0 +1,17 @@
+.aptitude{
+    background-image: url(../assets/images/negociando.png);
+    background-size: cover;
+}
+
+.footer{
+    height: 30vh;
+    background-color: darken($primary-dark, 5%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    &__text{
+        font-size: 16px;
+    }
+}

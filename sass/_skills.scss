@@ -1,18 +1,6 @@
 .skills{
     background-image: url(../assets/images/teacher-bnw.png);
     background-size: cover;
-    
-    &__container{
-        position: relative;
-        width: 80%;
-        margin: auto;
-    }
-    &__title{
-        padding: 40px 0;
-        font-size: 48px;
-        position: relative;
-        z-index: 1;
-    }
     &__arrow{
         width: 10px;
         height: 10px;
@@ -23,8 +11,6 @@
         transition: all 1s;
     }    
 }
-
-
 
 .skill{
     &__content{

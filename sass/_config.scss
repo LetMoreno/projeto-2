@@ -27,3 +27,19 @@ $tablet-font: 14/16;
     transition: .3s ease;
     text-transform: uppercase;
 }
+
+%title{
+    color: #fff;
+    font-weight: 400;
+}
+
+%subtitle{
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $secondary-dark;
+}
+
+%paragraph{
+    color: $paragraph-clr;
+    line-height: 26px;
+}

@@ -1,0 +1,20 @@
+.methods__container{
+    width: 85%;
+    margin: auto;
+}
+
+.method{
+    margin: 20px -3px;
+    &__title{
+        list-style-type: circle;
+        margin-bottom: 5px;
+        font-size: 14px;
+        &::marker{
+            font-size: 25px;
+        }
+    }
+    &__text{
+        font-size: 16px;
+    }
+
+}

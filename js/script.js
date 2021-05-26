@@ -1,4 +1,4 @@
-
+const slides=document.querySelectorAll(".slide"),slideContainer=document.querySelector(".slides__container"),numeroSlides=slides.length,navBtns=document.querySelectorAll(".nav_plus");let currSlide=0;var playSlider;const autoPlay=()=>{playSlider=setInterval(nextSlide,4e3)};function manualNav(e){slides[e].classList.add("active"),navBtns[e].classList.add("active")}function nextSlide(){currSlide++,slides[currSlide-1].classList.remove("active"),navBtns[currSlide-1].classList.remove("active"),currSlide>numeroSlides-1&&(currSlide=0),slides[currSlide].classList.add("active"),navBtns[currSlide].classList.add("active")}navBtns.forEach((e,l)=>{e.addEventListener("click",()=>{slides[currSlide].classList.remove("active"),navBtns[currSlide].classList.remove("active"),manualNav(l),currSlide=l})}),slideContainer.addEventListener("mouseover",()=>{clearInterval(playSlider)}),slideContainer.addEventListener("mouseout",()=>{autoPlay()}),autoPlay();
 
 
 

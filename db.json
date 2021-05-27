@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "john doe",
+      "email": "john@doe.com",
+      "cpf": "451.154.234-21",
+      "telefone": "(12) 99777-9876"
+    },
+    {
+      "id": 2,
+      "name": "john doe2",
+      "email": "john2@doe.com",
+      "cpf": "222.222.222-22",
+      "telefone": "(12) 33777-4476"
+    },
+    {
+      "name": "asdadas",
+      "email": "leticia.moreno@racoon.ag",
+      "cpf": "666.666.666-66",
+      "telefone": "(66) 66666-6666",
+      "id": 3
+    }
+  ]
+}

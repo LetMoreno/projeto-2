@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "gulp-cli": "^2.3.0"
+    "gulp-cli": "^2.3.0",
+    "json-server": "^0.16.3"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
@@ -8,5 +9,22 @@
     "gulp-plumber": "^1.2.1",
     "gulp-rename": "^2.0.0",
     "gulp-uglify": "^3.0.2"
-  }
+  },
+  "scripts": {
+    "json-server": "json-server --watch db.json"
+  },
+  "name": "projeto-2",
+  "version": "1.0.0",
+  "main": "/js/script.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LetMoreno/projeto-2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LetMoreno/projeto-2/issues"
+  },
+  "homepage": "https://github.com/LetMoreno/projeto-2#readme",
+  "description": ""
 }

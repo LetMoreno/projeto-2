@@ -10,6 +10,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Yantramanav:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"/>
 </head>
 <body>
+    <div class="form-wrapper inactive" id="form-wrapper">
+        <form class="form" id="form">
+            <div class="x-button" id="close-btn">
+                <div class="x-button__line x-button__line-1"></div> 
+                <div class="x-button__line x-button__line-2"></div> 
+            </div>
+            <div class="form__text">
+                <h1 class="subtitle-1 form__title">LOREM</h1>
+                <p class="paragraph-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+            </div>
+            <input type="text" name="name" class="input input--text" id="nome" placeholder="Nome" required/>
+            <input type="tel" name="tel" class="input input--text" id="tel" placeholder="Telefone" maxlength="15" required />
+            <input type="text" name="CPF" class="input input--text" id="cpf" placeholder="CPF" required maxlength="14"/>
+            <input type="email" name="email" id="email" class="input input--text" placeholder="E-mail" required/>
+            <div class="termos-wrapper">
+                <input type="checkbox" name="termos" id="termos" class="input--checkbox" required>
+                <span class="termos-text">Li e aceito os <a href="/" class="termos-link">termos de uso</a>.</span> 
+            </div>
+            <input type="submit" value="declarar interesse" class="input--submit button--primary"/>
+        </form>
+    </div>
     <div class="background">
         <header class="header">
             <img src="./assets/images/LOGOSYNAPSE_simbolo_laranja@2x.png" class="header__img"/>
@@ -87,7 +108,7 @@
                 <h1 class="container__title title--h1">O que você Aprenderá</h1>
                 <div class="square"></div>
             </div>
-            <div class="skill">
+            <div class="skill open">
                 <div class="skill__title"><p class="skill__title--p ">Competência 1</p><div class="skills__arrow"></div></div>
                 <p class="skill__content paragraph-1">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
@@ -103,7 +124,7 @@
                     Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet.
                 </p>
             </div>
-            <div class="skill open">
+            <div class="skill">
                 <div class="skill__title"><p class="skill__title--p ">Competência 3</p><div class="skills__arrow"></div></div>
                 <p class="skill__content paragraph-1">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, 

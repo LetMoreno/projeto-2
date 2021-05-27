@@ -1,6 +1,6 @@
 .skills{
     background-image: url(../assets/images/teacher-bnw.png);
-    background-size: cover;
+    background-size: auto;
     &__arrow{
         width: 10px;
         height: 10px;
@@ -13,18 +13,21 @@
 }
 
 .skill{
+    height: 46px;
+    transition: height 1s ease;
     &__content{
         background-color: $primary-dark;
         border: 1px solid $secondary-dark;
         border-left: none;
         border-right: none;
-        padding: 24px 16px;
         font-size: 18px;
         line-height: 31px;
         color: #fff;
-        display: none;
-        transform: translateY(-100px);
-        transition: transform 1s;
+
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+        transition: all 1s ease;
     }
     &__title{
         background-color: $primary-light;
@@ -41,9 +44,12 @@
         }   
     }
     &.open{
+        height: 100%;
+        transition: height 1s ease;
         .skill__content{
-            transform: translateY(0);
-            display: block;
+            padding: 24px 16px;
+            height: 236px;
+            visibility: visible;
         }
         .skill__title--p{
             font-weight: 600;

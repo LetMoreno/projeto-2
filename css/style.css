@@ -102,6 +102,99 @@
   font-weight: 600;
 }
 
+.x-button {
+  cursor: pointer;
+  height: 28px;
+  width: 28px;
+  margin: 20px 20px 0 0;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.x-button__line {
+  width: 100%;
+  height: 1px;
+  background-color: #686868;
+}
+.x-button__line-1 {
+  transform: rotate(45deg) translate(-3px, 4px);
+}
+.x-button__line-2 {
+  transform: rotate(-45deg) translate(-3px, -4px);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #232323;
+  width: 80%;
+  height: 95%;
+  max-width: 636px;
+  margin: auto;
+  border-radius: 5px;
+}
+.form__text {
+  width: 80%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.form-wrapper {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  display: flex;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+.form__title {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.input {
+  width: 80%;
+  border-radius: 4px;
+  max-width: 328px;
+}
+.input--text {
+  height: 56px;
+  font-size: 16px;
+  padding: 16px;
+  border: 1px solid #F89D24;
+  color: #191919;
+}
+.input--text::placeholder {
+  color: #F89D24;
+}
+.input--text:focus {
+  box-shadow: 0 0 0 2pt #F89D24;
+  outline: none;
+}
+.input--checkbox {
+  background-color: none;
+}
+.input--submit {
+  margin: 24px 0;
+}
+
+.termos-text {
+  color: #fff;
+}
+.termos-link {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.inactive {
+  opacity: 0;
+  transition: all 0.3s ease;
+  visibility: hidden;
+}
+
 .button--primary {
   background-color: #F89D24;
   border: none;
@@ -215,7 +308,7 @@
 
 .skills {
   background-image: url(../assets/images/teacher-bnw.png);
-  background-size: cover;
+  background-size: auto;
 }
 .skills__arrow {
   width: 10px;
@@ -227,18 +320,22 @@
   transition: all 1s;
 }
 
+.skill {
+  height: 46px;
+  transition: height 1s ease;
+}
 .skill__content {
   background-color: #191919;
   border: 1px solid #F89D24;
   border-left: none;
   border-right: none;
-  padding: 24px 16px;
   font-size: 18px;
   line-height: 31px;
   color: #fff;
-  display: none;
-  transform: translateY(-100px);
-  transition: transform 1s;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transition: all 1s ease;
 }
 .skill__title {
   background-color: #686868;
@@ -254,9 +351,14 @@
   font-weight: 200;
   padding: 10px;
 }
+.skill.open {
+  height: 100%;
+  transition: height 1s ease;
+}
 .skill.open .skill__content {
-  transform: translateY(0);
-  display: block;
+  padding: 24px 16px;
+  height: 236px;
+  visibility: visible;
 }
 .skill.open .skill__title--p {
   font-weight: 600;

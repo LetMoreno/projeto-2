@@ -1,0 +1,93 @@
+.x-button{
+    cursor: pointer;
+    height: 28px;
+    width: 28px;
+    margin: 20px 20px 0 0;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &__line{
+        width: 100%;
+        height: 1px;
+        background-color: $primary-light;
+
+        &-1{
+            transform: rotate(45deg) translate(-3px, 4px);
+        }
+        &-2{
+            transform: rotate(-45deg) translate(-3px, -4px);
+            
+        }
+    }
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #232323;
+    width: 80%;
+    height: 95%;
+    max-width: 636px;
+    margin: auto;
+    border-radius: 5px;
+    &__text{
+        width: 80%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    &-wrapper{
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: fixed;
+        display: flex;
+        z-index: 2;
+        transition: all 0.3s ease;
+    }
+    &__title{
+        font-size: 38px;
+        margin-bottom: 10px;
+    }
+}
+
+.input{
+    width: 80%;
+    border-radius: 4px;
+    max-width: 328px;
+    &--text{
+        height: 56px;
+        font-size: 16px;
+        padding: 16px;
+        border: 1px solid $secondary-dark;
+        color: $primary-dark;
+        &::placeholder{color: $secondary-dark;}
+        &:focus{
+            box-shadow: 0 0 0 2pt $secondary-dark;
+            outline: none;
+        }
+    }
+    &--checkbox{
+        background-color: none;
+    }
+    &--submit{
+        margin: 24px 0;
+    }
+}
+
+.termos{
+    &-text{
+        color: #fff;
+    }
+    &-link{
+        text-decoration: underline;
+        color: #fff;
+    }
+}
+.inactive{
+    opacity: 0;
+    transition: all 0.3s ease;
+    visibility: hidden;
+}

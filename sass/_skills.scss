@@ -28,11 +28,12 @@
         overflow: hidden;
         visibility: hidden;
         transition: all 1s ease;
+
+        &-desktop{display: none;}
     }
     &__title{
         background-color: $primary-light;
         height: 46px;
-        width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -43,10 +44,13 @@
             padding: 10px;
         }   
     }
+    &__link{
+        padding-right: 10px;
+    }
     &.open{
         height: 100%;
         transition: height 1s ease;
-        .skill__content{
+        .skill__content-mobile{
             padding: 24px 16px;
             height: 236px;
             visibility: visible;

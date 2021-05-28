@@ -81,6 +81,17 @@
     }
 }
 
+.link{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    &-primary{color: $secondary-dark;}
+    &-secondary{color: #fff}
+
+    &:hover{text-decoration: underline}
+}
+
 @import 'form';
 @import 'buttons';
 @import 'banners';
@@ -89,4 +100,5 @@
 @import 'slides';
 @import 'methods';
 @import 'footer';
-@import 'queries';
+@import 'tablet';
+@import 'desktop';

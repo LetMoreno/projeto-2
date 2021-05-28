@@ -1,5 +1,6 @@
 const closeBtn = document.getElementById('close-btn');
 const openBtns = document.querySelectorAll('.button--secondary');
+const openLinks = document.querySelectorAll('.link-secondary');
 
 
 function closeForm() {
@@ -15,4 +16,10 @@ function openForm() {
 closeBtn.addEventListener('click', closeForm);
 openBtns.forEach(btn => {
     btn.addEventListener('click', openForm);
+});
+openLinks.forEach(link => {
+    link.addEventListener('click', e=>{
+        e.preventDefault();
+        openForm();
+    });
 });

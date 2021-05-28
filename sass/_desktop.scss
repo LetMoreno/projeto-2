@@ -1,0 +1,113 @@
+@media (min-width:1024px){
+    .title{
+        &--h1{font-size: 54px;}
+        &--h2{font-size: 48px;}
+        &--h3{font-size: 32px;}
+        &--h4{font-size: 24px;}
+    }
+    .subtitle{
+        &-1{font-size: 32px;}
+        &-2{font-size: 24px;}
+        &-3{font-size: 14px;}
+    }
+    .paragraph{
+        &-1{font-size: 18px;}
+        &-2{font-size: 16px;}
+    }
+    .square{
+        height: 206px;
+        width: 205px;
+        left: -50px;
+    }
+    .container{
+        &__objective, &__methods{
+            display: flex;
+            justify-content: center;
+            &__text{
+                width: 40%;
+            }
+        }
+        &__title{
+            font-size: 64px;
+            padding-top: 130px;
+            width: 100%;
+        }
+    }
+    .cards__obj{
+        justify-content: flex-end;
+        max-width: 646px;
+    }
+    .objectives, .methods{
+        .call__buttons{
+            justify-content: flex-start;
+            width: 90%;
+            margin: auto;
+        }
+    }
+    .objectives{
+        .call__buttons{
+            &::after{
+            content: 'R$ 5.000,00';
+            position: relative;
+            top: -45px;
+            right: 176px;
+            font-weight: 600;
+            color: lighten($primary-light, 30%);
+            }
+        }
+    }
+    .methods{
+        &__container{
+            width: 40%;
+            height: 384px;
+            margin-top: 150px;
+            .subtitle-2{font-size: 14px;}
+        }
+    }
+    
+
+
+    .mid_banner{
+        justify-content: start;
+        align-items: center;
+        &::before{height: 70vh;}
+        &__title{
+            &__container{
+                width: 50%;
+            }
+        }
+    }
+    .price{
+        right: 0;
+        bottom: 50%;
+        transform: translateY(50%);
+        width: 538px;
+        height: 296px;
+    }
+
+    .skills{
+        background-size: cover;
+        &__arrow{display: none;}
+        .container{
+            display: flex;
+            flex-flow: column;
+            align-content: center;
+            padding: 100px;
+        }
+        .container__text, .call__buttons{
+            display: none;
+        }
+    }
+
+
+    .card--desk{display: block;}
+    .slides{
+        .subtitle-2{text-align: right;}
+    }
+    .slide__text{
+        width: 70%;
+    }
+    
+
+
+}

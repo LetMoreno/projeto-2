@@ -1,0 +1,83 @@
+@media (min-width:'768px') {
+    .header{
+        &__img{
+            width: 116px;
+            margin: 27px 0 43px 43px;
+        }
+    }
+    .banner{
+        height: 70vh;
+        &__text{
+            height: 50vh;
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .call{
+        &__buttons{
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+    .title{
+        &--h1{font-size: $tablet-font*54px;}
+        &--h2{font-size: $tablet-font*48px;}
+        &--h3{font-size: $tablet-font*32px;}
+        &--h4{font-size: $tablet-font*24px;}
+    }
+    .subtitle{
+        &-1{font-size: $tablet-font*32px;}
+        &-2{font-size: $tablet-font*24px;}
+        &-3{font-size: $tablet-font*14px;}
+    }
+    .paragraph{
+        &-1{font-size: $tablet-font*18px;}
+        &-2{font-size: $tablet-font*16px;}
+    }
+
+    .cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .card{
+        width: 253px;
+        margin: 10px;
+        &__teacher{width: 363px;}
+        &--tablet{display: block;}
+    }
+
+    .prev-btn, .next-btn{
+        height: 30px;
+        width: 30px;
+        border: 10px solid $primary-light;
+        border-bottom: none;
+        border-left: none;
+        z-index: 1;
+        margin: 20px;
+        cursor: pointer;
+      }
+      .prev-btn{transform: rotate(-130deg);}
+      .next-btn{transform:rotate(45deg);}
+
+      .skill{
+        &__content{
+            &-mobile{display: none;}
+            &-desktop{display: block;}
+               
+        }
+        &.open{
+            .skill__content-desktop{
+                padding: 25px 100px; 
+                height: 236px;
+                visibility: visible;
+            }
+        }   
+    }
+    .methods__container{
+        .subtitle-2{font-size: 14px;}
+    }
+}

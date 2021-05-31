@@ -35,10 +35,13 @@
         display: flex;
         &__text{
             width: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
     }
     .flex-right{
-        margin-top: 130px;
+        margin-top: 100px;
         margin-bottom: 100px;
     }
     .cards__objectives{
@@ -93,7 +96,20 @@
 
     .skills{
         background-size: cover;
+        &--mobile{display: none;}
         &__arrow{display: none;}
+        &--desktop{
+            display: flex;
+            &__titles{
+                background-color: $primary-light;
+                width: 40%;
+            }
+            &__content{
+                background-color: $primary-dark;
+                width: 60%;
+                position: relative;
+            }
+        }
         .container{
             display: flex;
             flex-flow: column;
@@ -102,6 +118,23 @@
         }
         .container__text{
             display: none;
+        }
+    }
+    .skill{
+        &__title{
+            &--desktop{
+                justify-content: center;
+                height: 76px;
+                cursor: pointer;
+            }
+            &--p{font-size: 25px;}
+        }
+        &__content--desktop{
+            height: 100%;
+            padding: 9%;
+            visibility: visible;
+            border: none;
+            position: absolute;
         }
     }
     .card--desk{display: block;}

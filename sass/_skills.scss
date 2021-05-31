@@ -9,7 +9,8 @@
         border-left: 2px solid #fff;
         transform:  rotate(225deg);
         transition: all 1s;
-    }    
+    }
+    &--desktop{display: none;}  
 }
 
 .skill{

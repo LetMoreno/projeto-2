@@ -63,20 +63,6 @@
       .prev-btn{transform: rotate(-130deg);}
       .next-btn{transform:rotate(45deg);}
 
-      .skill{
-        &__content{
-            &-mobile{display: none;}
-            &-desktop{display: block;}
-               
-        }
-        &.open{
-            .skill__content-desktop{
-                padding: 25px 100px; 
-                height: 236px;
-                visibility: visible;
-            }
-        }   
-    }
     .methods__container{
         .subtitle-2{font-size: 14px;}
     }

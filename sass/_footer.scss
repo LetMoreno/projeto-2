@@ -1,6 +1,12 @@
 .aptitude{
     background-image: url(../assets/images/negociando.png);
     background-size: cover;
+    .container{
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
 }
 
 .footer{

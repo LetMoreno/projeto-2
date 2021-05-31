@@ -19,58 +19,64 @@
         width: 205px;
         left: -50px;
     }
-    .container{
-        &__objective, &__methods{
+    .call__buttons{
+        &--mobile{display: none;}
+        &--desk{
             display: flex;
-            justify-content: center;
-            &__text{
-                width: 40%;
-            }
-        }
-        &__title{
-            font-size: 64px;
-            padding-top: 130px;
-            width: 100%;
+            width: fit-content;
         }
     }
-    .cards__obj{
+    .container__title{
+        font-size: 64px;
+        padding-top: 130px;
+        width: 100%;
+    }
+    .flex-container{
+        display: flex;
+        &__text{
+            width: 40%;
+        }
+    }
+    .flex-right{
+        margin-top: 130px;
+        margin-bottom: 100px;
+    }
+    .cards__objectives{
         justify-content: flex-end;
         max-width: 646px;
     }
-    .objectives, .methods{
-        .call__buttons{
-            justify-content: flex-start;
-            width: 90%;
-            margin: auto;
-        }
-    }
     .objectives{
-        .call__buttons{
-            &::after{
-            content: 'R$ 5.000,00';
-            position: relative;
-            top: -45px;
-            right: 176px;
-            font-weight: 600;
-            color: lighten($primary-light, 30%);
+        .call__buttons--desk{
+            flex-wrap: wrap;
+            & .button--primary{
+                position: relative;
+                &::before{
+                content: 'R$ 5.000,00';
+                position: absolute;
+                top: -20px;
+                left: -10px;
+                width: 100px;
+                font-weight: 600;
+                color: lighten($primary-light, 30%);
+                }
             }
         }
     }
     .methods{
-        &__container{
+        & .flex-right{
             width: 40%;
-            height: 384px;
-            margin-top: 150px;
             .subtitle-2{font-size: 14px;}
         }
     }
     
-
-
     .mid_banner{
         justify-content: start;
         align-items: center;
-        &::before{height: 70vh;}
+        max-height: 372px;
+        &::before{
+            height: 70vh;
+            max-height: 372px;
+        }
         &__title{
             &__container{
                 width: 50%;
@@ -94,20 +100,13 @@
             align-content: center;
             padding: 100px;
         }
-        .container__text, .call__buttons{
+        .container__text{
             display: none;
         }
     }
-
-
     .card--desk{display: block;}
-    .slides{
-        .subtitle-2{text-align: right;}
-    }
-    .slide__text{
-        width: 70%;
-    }
-    
+    .slides{.subtitle-2{text-align: right;}}
+    .slide__text{width: 70%;}
 
 
 }

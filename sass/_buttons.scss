@@ -35,6 +35,9 @@
         align-items: center;
         padding-bottom: (33px - 12px);
         padding-top: 20px;
+        &--desk{
+            display: none;
+        }
     }
     &__button{
         margin: 12px;

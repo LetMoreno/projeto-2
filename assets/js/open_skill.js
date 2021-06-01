@@ -1,6 +1,7 @@
 if(window.screen.width < 1024){
     let skills = document.querySelectorAll('.skill--mobile');
-    let skillTitle = document.querySelectorAll('.skill__title');
+    let skillTitle = document.querySelectorAll('.skill__title--mobile');
+
     function removeOpenClass(skills) {
         skills.forEach(skill => {
             skill.classList.remove('open');

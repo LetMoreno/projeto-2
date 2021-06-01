@@ -1,7 +1,7 @@
 .button{
     &--primary{
         @extend %btn;
-        background-color: $secondary-dark;
+        background-color: darken($secondary-dark, 25%);
         border: none;
         &:hover{
             background-color: darken($secondary-dark, 10%);
@@ -32,7 +32,8 @@
     &__buttons{
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
         padding-bottom: (33px - 12px);
         padding-top: 20px;
         &--desk{

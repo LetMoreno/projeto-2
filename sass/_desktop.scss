@@ -153,6 +153,12 @@
         }
     }
     .card--desk{display: block;}
+
+    .teachers{
+        .call__buttons{
+            padding: 60px 0;
+        }
+    }
     .slides{
         .subtitle-2{text-align: right;}
         &__arrow{
@@ -177,6 +183,15 @@
     }
     .slide__text{width: 70%;}
 
+    .navigation{
+        width: 90%;
+        margin: auto;
+        opacity: 0;
+        transition: opacity .5s ease;
+
+        &:hover{opacity: 1;}
+    }
+
     .aptitude{
         height: 95vh;
         background-position: -30vw;
@@ -185,7 +200,7 @@
         justify-content: flex-end;
 
         .container{
-            margin: 0 100px;
+            margin: 0 50px;
             width: 40%;
             justify-content: flex-start;
 

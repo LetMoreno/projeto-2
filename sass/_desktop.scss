@@ -71,7 +71,11 @@
             .subtitle-2{font-size: 14px;}
         }
     }
-    
+    .banner{
+        &__paragraph{
+            width: 55%;
+        }
+    }
     .mid_banner{
         justify-content: start;
         align-items: center;
@@ -93,7 +97,6 @@
         width: 538px;
         height: 296px;
     }
-
     .skills{
         background-size: cover;
         &--mobile{display: none;}
@@ -116,9 +119,7 @@
             align-content: center;
             padding: 100px;
         }
-        .container__text{
-            display: none;
-        }
+        .container__text{display: none;}
     }
     .skill{
         &__title{
@@ -127,19 +128,97 @@
                 height: 76px;
                 cursor: pointer;
             }
-            &--p{font-size: 25px;}
+            &--p{
+                font-size: 25px;
+            }
         }
         &__content--desktop{
             height: 100%;
-            padding: 9%;
+            padding: 6%;
             visibility: visible;
             border: none;
             position: absolute;
+            &.paragraph-1{
+                opacity: 0;
+                transition: all 0.3 ease;
+                &.open{opacity: 1;}
+            }
+        }
+    }
+    .open{
+        & .skill__title--p{
+            font-weight: 600;
+            border-bottom: 1px solid $secondary-dark;
+            transition: all .5s ease;
         }
     }
     .card--desk{display: block;}
-    .slides{.subtitle-2{text-align: right;}}
+    .slides{
+        .subtitle-2{text-align: right;}
+        &__arrow{
+            width: 66px;
+            height: 66px;
+            position: absolute;
+
+            &--right{
+                top:40px;
+                right: 40px;
+                border-top: 1px solid $secondary-dark;
+                border-right: 1px solid $secondary-dark;
+            }
+
+            &--down{
+                bottom: 40px;
+                left: 40px;
+                border-left: 1px solid $secondary-dark;
+                border-bottom: 1px solid $secondary-dark;
+            }
+        }
+    }
     .slide__text{width: 70%;}
 
+    .aptitude{
+        height: 95vh;
+        background-position: -30vw;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: flex-end;
 
+        .container{
+            margin: 0 100px;
+            width: 40%;
+            justify-content: flex-start;
+
+            &__text{
+                width: 337px;
+                &::after{
+                    content: 'ultricies leo integer malesuada. Ac odio tempor';
+                    color: $paragraph-clr;
+                    font-weight: 300;
+                    line-height: 26px;
+                    font-size: 18px;
+                }
+            }
+            .call__buttons{justify-content: flex-start;}
+            .call__button{
+                margin-left: 0;
+                margin-right: 30px;
+            }
+            .square{
+                left: 60%;
+            }
+        }
+    }
+    .footer{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 60px;
+
+        &__aditional{
+            display: flex;
+            justify-content: space-between;
+            width: 50%;
+        }
+        &__text-desk{display: block;}
+    }
 }

@@ -3,10 +3,20 @@ const slideContainer = document.querySelector('.slides__container');
 const numeroSlides = slides.length;
 const navBtns = document.querySelectorAll('.nav_plus');
 let currSlide = 0;
+let touchStartX = 0;
+let touchEndX = 0;
 
-var playSlider;
-const autoPlay = () =>{
-    playSlider = setInterval(nextSlide, 4000);
+// var playSlider;
+// const autoPlay = () =>{
+//     playSlider = setInterval(nextSlide, 4000);
+// }
+// slideContainer.addEventListener('mouseover', ()=>{ clearInterval(playSlider); });
+// slideContainer.addEventListener('mouseout', ()=>{ autoPlay() });
+// autoPlay();
+
+function handleGesture() {
+    if(touchEndX < touchStartX) nextSlide();
+    else if(touchStartX < touchEndX) prevSlide();
 }
 
 function manualNav(navIndex){
@@ -50,9 +60,14 @@ navBtns.forEach((nav, i)=>{
     })
 });
 
+slideContainer.addEventListener('touchstart', e=>{
+    touchStartX = e.changedTouches[0].screenX;
+}, {passive: true})
+slideContainer.addEventListener('touchend', e=>{
+    touchEndX = e.changedTouches[0].screenX;
+    handleGesture();
+}, {passive: true})
+
 document.querySelector('.prev-btn').addEventListener('click', prevSlide);
 document.querySelector('.next-btn').addEventListener('click', nextSlide);
 
-slideContainer.addEventListener('mouseover', ()=>{ clearInterval(playSlider); });
-slideContainer.addEventListener('mouseout', ()=>{ autoPlay() });
-autoPlay();

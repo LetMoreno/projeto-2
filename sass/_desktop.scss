@@ -99,6 +99,7 @@
     }
     .skills{
         background-size: cover;
+        height: fit-content;
         &--mobile{display: none;}
         &__arrow{display: none;}
         &--desktop{
@@ -197,7 +198,6 @@
     }
 
     .aptitude{
-        height: 95vh;
         background-position: -30vw;
         background-repeat: no-repeat;
         display: flex;
@@ -218,7 +218,10 @@
                     font-size: 18px;
                 }
             }
-            .call__buttons{justify-content: flex-start;}
+            .call__buttons{
+                justify-content: flex-start;
+                padding-bottom: 140px;
+            }
             .call__button{
                 margin-left: 0;
                 margin-right: 30px;

@@ -1,35 +1,51 @@
-var gulp = require('gulp');
-var plumber = require('gulp-plumber');
-var uglify = require('gulp-uglify');
-var concat = require('gulp-concat');
-var cleanCSS = require('gulp-clean-css');
+const gulp = require('gulp');
+const plumber = require('gulp-plumber');
+const uglify = require('gulp-uglify');
+const concat = require('gulp-concat');
+const cleanCSS = require('gulp-clean-css');
+const convert_webp = require('gulp-webp');
+const imagemin = require('gulp-imagemin');
 
-//src path
-var js_src = "./assets/js/*.js";
-var css_src = "./css/style.css";
+const sources = {
+    js: "./assets/js/*.js",
+    css: "./css/style.css",
+    img: "./assets/images/*",
+    minified: './assets/minified-images/*'
+};
 
-
-//dest path
-var js_dist = "./js/";
-var js_dist_name = "script.js";
-
-var css_dist = "./css/";
-var css_dist_name = "style-minified.css";
+const dest = {
+    js: "./js/",
+    css: "./css/",
+    webp: "./assets/webp-images/",
+    minified: './assets/minified-images/'
+};
 
 gulp.task('scripts', function(){
-    return gulp.src(js_src)
+    return gulp.src(sources.js)
             .pipe(plumber())
             .pipe(uglify())
-            .pipe(concat(js_dist_name))
-            .pipe(gulp.dest(js_dist));
+            .pipe(concat('script.js'))
+            .pipe(gulp.dest(dest.js));
 });
 
 gulp.task('minify-css', function () {
-    return gulp.src(css_src)
+    return gulp.src(sources.css)
             .pipe(cleanCSS())
-            .pipe(gulp.dest(css_dist));
-})
+            .pipe(gulp.dest(dest.css));
+});
+
+gulp.task('webp', function () {
+    return gulp.src(sources.minified)
+            .pipe(convert_webp())
+            .pipe(gulp.dest(dest.webp));
+});
+
+gulp.task('imagemin', function () {
+    return gulp.src(sources.img)
+            .pipe(imagemin())
+            .pipe(gulp.dest(dest.minified));
+});
 
 gulp.task('watch', function(){
-    gulp.watch([js_src], gulp.series('scripts'));
+    gulp.watch([sources.js], gulp.series('scripts'));
 });

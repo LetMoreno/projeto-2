@@ -13,15 +13,10 @@ if(window.screen.width < 1024){
         skills[skillIndex].classList.add('open');
         skills = document.querySelectorAll('.skill');
     }
-
+    
     skillTitle.forEach((title, index) => {
         title.addEventListener('click', (e)=>{
-            if(e.target.parentNode.classList.contains('open')){
-                removeOpenClass(skills);
-            }
-            else{
-                addOpenClass(skills, index);
-            }
+            addOpenClass(skills, index);
         });
     });
 }
